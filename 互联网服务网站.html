@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>酷站</title>
+	<link rel="stylesheet" href="1.css" type="text/css" />
+ </head>
+ <body>
+  	<div id="java" align="center">
+		<font color="#663300" size="3"><strong>时间:</strong><strong id="time"></strong></font><br/>
+			<hr size="1" color="#ffffff"/>
+			<font color="#663300" size="3"><strong>打开浏览器时间:</strong><strong id="howlong"></strong></font><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.timedate.cn/" target="_blank">国际时间</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.top500.org" target="_blank">大型计算机TOP500</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="https://www.tiobe.com/tiobe-index/" target="_blank">世界编程语言排行榜</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.86wk.com/" target="_blank">中华网库（域名注册）</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.admin6.com/" target="_blank">广告联盟</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.cert.org.cn/publish/main/index.html" target="_blank">国家互联网应急中心</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="https://mail.qq.com/" target="_blank">QQ邮箱</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://email.163.com/" target="_blank">163邮箱</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://tool.oschina.net/codeformat/js/" target="_blank">格式化JS代码</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.iconfinder.com" target="_blank">搜索图标的国外网站（iconfinder）</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.iconfont.cn/" target="_blank">阿里图标库</a><br/>
+			<hr size="1" color="#ffffff"/>	
+		<a href="http://www.58img.com/" target="_blank">Web前端资源网</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="https://www.awesomes.cn/" target="_blank">Awesomes - Web前端开发资源库</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="https://golang.org" target="_blank">GO语言官网</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="https://studygolang.com/pkgdoc" target="_blank">GO语言文档</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="https://beego.me/" target="_blank">Beego</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://liteide.org" target="_blank">GO-liteide</a><br/>
+			<hr size="1" color="#ffffff"/>
+		<a href="http://www.mytju.com/classcode/tools/encode_utf8.asp" target="_blank">UTF-8编码表查询</a><br/>
+			<hr size="1" color="#ffffff"/>
+		
+			
+			
+	</div>
+	<script type="text/javascript">
+				var t =new Date();//开始时间
+		
+		function showtime(){
+			
+			var time = new Date();
+
+			var date3=time.getTime()-t.getTime();
+
+			//var days=Math.floor(date3/(24*3600*1000));//相差天数
+
+			var leave1=date3%(24*3600*1000);    //计算天数后剩余的毫秒数
+			var hours=Math.floor(leave1/(3600*1000));
+
+			//计算相差分钟数
+			var leave2=leave1%(3600*1000);        //计算小时数后剩余的毫秒数
+			var minutes=Math.floor(leave2/(60*1000));
+
+			//计算相差秒数
+			var leave3=leave2%(60*1000);      //计算分钟数后剩余的毫秒数
+			var seconds=Math.round(leave3/1000);
+
+
+			var formattime = time.toLocaleString();
+			
+			var howlong = document.getElementById("howlong");
+
+			var classtime = document.getElementById("time");
+			
+			classtime.innerHTML = formattime;
+
+			howlong.innerHTML = hours +":"+minutes+":"+seconds;
+		}
+
+		setInterval("showtime();",1000);
+	</script>
+ </body>
+</html>

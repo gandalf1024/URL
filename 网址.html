@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>导航</title>
+</head>
+<body>
+	<div align="center">
+		<button id="listb1" style="color:blue; text-align:center">搜索</button>
+		<button id="listb2" style="color:blue; text-align:center">互联网服务网站</button>
+		<button id="listb3" style="color:blue; text-align:center">生活</button>
+		<button id="listb4" style="color:blue; text-align:center">开源项目官网</button>
+		<button id="listb5" style="color:blue; text-align:center">技术网站</button>
+		<button id="listb6" style="color:blue; text-align:center">开发用(服务器路径)</button>
+		<button id="listb7" style="color:blue; text-align:center">软件</button>
+		<button id="listb8" style="color:blue; text-align:center">黑客和安全</button>
+		<button id="listb9" style="color:blue; text-align:center">博客</button>
+		<button id="listb10" style="color:blue; text-align:center">英语</button>
+	</div>
+	<div align="center">
+		<iframe id="list1" class="listname" src="搜索.html" height="3000" width="100%"  frameborder="0"></iframe>
+		<iframe id="list2" class="listname" src="互联网服务网站.html" height="3000" width="100%"  frameborder="0"></iframe>
+		<iframe id="list3" class="listname" src="生活.html" height="3000" width="100%"  frameborder="0"></iframe>
+		<iframe id="list4" class="listname" src="开源项目官网.html" height="3000" width="100%"  frameborder="0"></iframe><br/>
+		<iframe id="list5" class="listname" src="技术网站.html" height="3000" width="100%"  frameborder="0"></iframe>
+		<iframe id="list6" class="listname" src="开发用(服务器路径).html" height="3000" width="100%"  frameborder="0"></iframe>
+		<iframe id="list7" class="listname" src="软件.html" height="3000" width="100%"  frameborder="0"></iframe>
+		<iframe id="list8" class="listname" src="黑客和安全.html" height="3000" width="100%"   frameborder="0"></iframe>
+		<iframe id="list9" class="listname" src="博客.html" height="3000" width="100%"  frameborder="0"></iframe>
+		<iframe id="list10" class="listname" src="英语.html" height="3000"  width="100%"  frameborder="0"></iframe>
+	</div>
+</body>
+
+<!-- jQuery -->
+<script src="./jquery3.js"></script>
+<script>
+
+	hiall();
+
+	function hiall(){
+		$(".listname").hide();
+	}
+
+	$("#list6").show(800);
+	
+	$("#listb1").click( function () {
+		hiall();
+		$("#list1").show();
+	});
+	
+	$("#listb2").click( function () {
+		hiall();
+		$("#list2").show();
+	});
+	
+	$("#listb3").click( function () {
+		hiall();
+		$("#list3").show();
+	});
+	
+	
+	$("#listb4").click( function () {
+		hiall();
+		$("#list4").show();
+	});
+	
+	$("#listb5").click( function () {
+		hiall();
+		$("#list5").show();
+	});
+	
+	$("#listb6").click( function () {
+		hiall();
+		$("#list6").show();
+	});
+	
+	$("#listb7").click( function () {
+		hiall();
+		$("#list7").show();
+	});
+	
+	$("#listb8").click( function () {
+		hiall();
+		$("#list8").show();
+	});
+	
+	
+	$("#listb9").click( function () {
+		hiall();
+		$("#list9").show();
+	});
+	
+	$("#listb10").click( function () {
+		hiall();
+		$("#list10").show();
+	});
+	
+	
+</script>
+</html>
